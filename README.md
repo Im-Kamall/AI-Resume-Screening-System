@@ -1,38 +1,372 @@
 # 🤖 AI Resume Screening System
 
-An AI-powered Resume Screening System built using **Python, Natural Language Processing (NLP), Machine Learning, and Streamlit**. The application predicts the job category of a resume, extracts technical skills, compares the resume against a job description, and provides personalized improvement suggestions.
+<div align="center">
+
+# 📄 AI Resume Screening System
+
+### AI-Powered Resume Analysis using Natural Language Processing (NLP), Machine Learning, and Streamlit
+
+<p align="center">
+
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit)](https://ai-resume-screening-kamal26.streamlit.app/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?logo=scikit-learn)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+</p>
+
+### 🌐 Live Application
+
+**https://ai-resume-screening-kamal26.streamlit.app/**
 
 ---
 
-## 🚀 Features
+**An end-to-end Machine Learning project that automatically analyzes resumes, predicts job categories, extracts technical skills, compares resumes with job descriptions, and generates intelligent resume improvement suggestions.**
 
-* 📄 Resume Category Prediction
-* 📂 PDF Resume Upload
-* 🧠 NLP-based Resume Cleaning
-* 🏷 Skill Extraction
-* 🎯 Resume vs Job Description Matching
-* 📊 Match Score Visualization
-* 💡 AI Resume Improvement Suggestions
-* 📈 Exploratory Data Analysis (EDA)
-* 🤖 Machine Learning Classification
+</div>
 
 ---
 
-## 🛠 Tech Stack
+# 📖 Introduction
+
+Recruiters often spend only a few seconds reviewing each resume before deciding whether a candidate moves forward in the hiring process. Manual resume screening becomes increasingly difficult when organizations receive hundreds or thousands of applications for a single position.
+
+The **AI Resume Screening System** addresses this challenge by using **Natural Language Processing (NLP)** and **Machine Learning** to automate the resume analysis process.
+
+The application enables users to:
+
+* Upload a resume in PDF format
+* Paste resume text directly
+* Predict the most suitable job category
+* Extract technical skills automatically
+* Compare resumes with job descriptions
+* Calculate a resume-job compatibility score
+* Generate personalized resume improvement suggestions
+
+This project demonstrates the complete Machine Learning workflow—from data preprocessing and exploratory data analysis to model training, evaluation, and deployment using Streamlit.
+
+---
+
+# 🎯 Project Objectives
+
+The primary objectives of this project are:
+
+* Automate resume screening using Machine Learning.
+* Reduce manual effort during the hiring process.
+* Improve resume evaluation through NLP.
+* Provide personalized resume feedback.
+* Demonstrate a complete end-to-end ML pipeline suitable for real-world applications.
+
+---
+
+# ✨ Key Features
+
+## 📄 Resume Upload
+
+* Upload PDF resumes.
+* Paste resume text manually.
+
+---
+
+## 🤖 Resume Classification
+
+Automatically predicts the most suitable career category based on resume content.
+
+Example categories include:
+
+* HR
+* Data Science
+* Information Technology
+* Engineering
+* Banking
+* Healthcare
+* Finance
+* Sales
+* Teacher
+* Designer
+* Business Development
+
+and many more.
+
+---
+
+## 🧠 NLP-Based Resume Processing
+
+The system performs:
+
+* Lowercase conversion
+* Special character removal
+* Stopword removal
+* Lemmatization
+* Text normalization
+
+---
+
+## 🏷 Technical Skill Extraction
+
+Automatically identifies technologies mentioned in the resume such as:
+
+Programming
 
 * Python
-* Pandas
-* NumPy
-* Scikit-learn
-* NLTK
+* Java
+* C++
+* SQL
+
+Frameworks
+
+* TensorFlow
+* PyTorch
+* Scikit-Learn
 * Streamlit
-* Matplotlib
-* WordCloud
-* Joblib
+* FastAPI
+
+Databases
+
+* MySQL
+* PostgreSQL
+* MongoDB
+
+Cloud
+
+* AWS
+* Azure
+* GCP
+
+Development Tools
+
+* Git
+* GitHub
+* Docker
 
 ---
 
-## 📂 Project Structure
+## 🎯 Resume vs Job Description Matching
+
+The application compares resume skills with job requirements and provides:
+
+* Resume Match Score
+* Matched Skills
+* Missing Skills
+
+---
+
+## 💡 Resume Improvement Suggestions
+
+Provides recommendations such as:
+
+* Missing technologies
+* Missing technical skills
+* Resume length improvements
+* Additional learning recommendations
+
+---
+
+## 📈 Exploratory Data Analysis
+
+EDA includes:
+
+* Category Distribution
+* Resume Length Analysis
+* Word Cloud Visualization
+* Duplicate Detection
+* Missing Value Analysis
+
+---
+
+## 🌐 Interactive Streamlit Dashboard
+
+The web application provides:
+
+* Modern UI
+* PDF Upload
+* Resume Text Input
+* Job Description Input
+* Skill Visualization
+* Resume Feedback
+* Match Score
+
+---
+
+# 🏗 System Architecture
+
+```text
+Resume PDF / Resume Text
+           │
+           ▼
+     Text Extraction
+           │
+           ▼
+      NLP Cleaning
+           │
+           ▼
+     TF-IDF Vectorizer
+           │
+           ▼
+ Linear SVM Classifier
+           │
+           ▼
+Predicted Job Category
+           │
+           ▼
+Skill Extraction
+           │
+           ▼
+Job Description Matching
+           │
+           ▼
+Resume Feedback
+```
+
+---
+
+# 🛠 Technology Stack
+
+## Programming Language
+
+* Python
+
+---
+
+## Machine Learning
+
+* Scikit-Learn
+* TF-IDF Vectorizer
+* Logistic Regression
+* Multinomial Naive Bayes
+* Linear Support Vector Machine (Linear SVM)
+
+---
+
+## Natural Language Processing
+
+* NLTK
+* Stopwords
+* Lemmatization
+* Regular Expressions (Regex)
+
+---
+
+## Data Processing
+
+* Pandas
+* NumPy
+
+---
+
+## Data Visualization
+
+* Matplotlib
+* WordCloud
+
+---
+
+## Deployment
+
+* Streamlit
+
+---
+
+## Utilities
+
+* Joblib
+* PyPDF2
+
+---
+
+# 📊 Dataset Information
+
+| Property                  |        Value |
+| ------------------------- | -----------: |
+| Total Resumes             |    **2,484** |
+| Categories                |       **24** |
+| Missing Values            |        **0** |
+| Duplicate Records Removed |            ✅ |
+| Text Preprocessing        | NLP Cleaning |
+
+Dataset Source: Public Resume Dataset
+
+---
+
+# 📈 Exploratory Data Analysis
+
+EDA performed includes:
+
+* Dataset Overview
+* Missing Value Analysis
+* Duplicate Detection
+* Resume Length Distribution
+* Category Frequency Distribution
+* Resume Word Cloud
+* Resume Statistics
+
+---
+
+# 🤖 Machine Learning Pipeline
+
+The project follows this workflow:
+
+1. Load Dataset
+2. Clean Resume Text
+3. Remove Stopwords
+4. Lemmatization
+5. TF-IDF Vectorization
+6. Train-Test Split
+7. Train Multiple Models
+8. Compare Model Performance
+9. Save Best Model
+10. Deploy Using Streamlit
+
+---
+
+# 📊 Model Comparison
+
+| Model                   |   Accuracy |
+| ----------------------- | ---------: |
+| Logistic Regression     | **64.79%** |
+| Multinomial Naive Bayes | **54.73%** |
+| ⭐ Linear SVM            | **70.42%** |
+
+### Best Model
+
+**Linear Support Vector Machine (Linear SVM)**
+
+Reason:
+
+* Highest Accuracy
+* Better Generalization
+* Faster Prediction
+* Suitable for Text Classification
+
+---
+
+# 📸 Application Screenshots
+
+## 🏠 Home Page
+
+![Home](assets/home.png)
+
+---
+
+## 📄 Resume Prediction
+
+![Prediction](assets/prediction.png)
+
+---
+
+## 🎯 Job Matching
+
+![Match Score](assets/match_score.png)
+
+---
+
+## 💡 Resume Feedback
+
+![Feedback](assets/feedback.png)
+
+---
+
+# 📂 Project Structure
 
 ```text
 AI_Resume_Screening_System
@@ -41,49 +375,22 @@ AI_Resume_Screening_System
 ├── train_model.py
 ├── requirements.txt
 ├── README.md
+├── LICENSE
 │
-├── data
-│   └── resume_dataset.csv
+├── assets/
 │
-├── models
-│   └── resume_model.pkl
+├── data/
 │
-├── notebooks
-│   └── resume_screening_eda.ipynb
+├── models/
 │
-├── src
-│   ├── predictor.py
-│   ├── text_cleaner.py
-│   ├── skill_extractor.py
-│   ├── job_matcher.py
-│   └── resume_feedback.py
+├── notebooks/
 │
-└── assets
+└── src/
 ```
 
 ---
 
-## 📊 Dataset
-
-* Total Resumes: **2,484**
-* Categories: **24**
-* Source: Public Resume Dataset
-
----
-
-## 🤖 Machine Learning Models
-
-| Model               |   Accuracy |
-| ------------------- | ---------: |
-| Logistic Regression |     64.79% |
-| Naive Bayes         |     54.73% |
-| **Linear SVM**      | **70.42%** |
-
-**Best Model:** Linear SVM
-
----
-
-## ▶️ Installation
+# 🚀 Installation
 
 ```bash
 git clone https://github.com/Im-Kamall/AI-Resume-Screening-System.git
@@ -99,27 +406,95 @@ streamlit run app.py
 
 ---
 
-## 📸 Screenshots
+# ▶️ How to Use
 
-Add screenshots inside the `assets/` folder and reference them here.
+1. Launch the application.
+2. Upload a resume PDF or paste resume text.
+3. Optionally provide a job description.
+4. Click **Analyze Resume**.
+5. Review:
 
----
-
-## 📈 Future Improvements
-
-* Deep Learning Models
-* Transformer-based Resume Classification
-* Top-3 Category Prediction
-* Better Skill Matching
-* Cloud Deployment
-* ATS Resume Score
-* LLM-powered Resume Feedback
+   * Predicted Category
+   * Extracted Skills
+   * Match Score
+   * Missing Skills
+   * Resume Improvement Suggestions
 
 ---
 
-## 👨‍💻 Author
+# 🚀 Live Demo
 
-**Kamal Solanki**
+https://ai-resume-screening-kamal26.streamlit.app/
 
-* GitHub: https://github.com/Im-Kamall
-* LinkedIn: https://www.linkedin.com/in/kamalsolanki-dev
+---
+
+# 🗺 Roadmap
+
+### Completed
+
+* Resume Classification
+* Skill Extraction
+* PDF Upload
+* Resume Matching
+* Resume Feedback
+* Machine Learning Pipeline
+* Streamlit Deployment
+
+### Planned
+
+* Transformer-based Classification
+* BERT Integration
+* ATS Resume Scoring
+* Resume Ranking
+* Multi-language Support
+* AI Interview Question Generator
+* LLM-powered Resume Review
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to improve the project:
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit your changes.
+4. Open a Pull Request.
+
+---
+
+# 👨‍💻 Author
+
+## Kamal Solanki
+
+**GitHub**
+
+https://github.com/Im-Kamall
+
+**LinkedIn**
+
+https://www.linkedin.com/in/kamalsolanki-dev
+
+**Live Demo**
+
+https://ai-resume-screening-kamal26.streamlit.app/
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+See the **LICENSE** file for complete details.
+
+---
+
+<div align="center">
+
+## ⭐ If you found this project useful, please give it a Star.
+
+Thank you for visiting this repository!
+
+</div>
