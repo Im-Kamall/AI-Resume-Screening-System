@@ -1,22 +1,26 @@
 import re
-import string
+import nltk
 
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+
+stop_words = set(stopwords.words("english"))
+lemmatizer = WordNetLemmatizer()
 
 def clean_text(text):
-    if not isinstance(text, str):
-        return ""
 
-    text = text.lower()
-    text = re.sub(r"http\S+|www\S+", " ", text)
-    text = re.sub(r"\S+@\S+", " ", text)
-    text = re.sub(r"\+?\d[\d\s\-]{8,}\d", " ", text)
-    text = text.translate(str.maketrans("", "", string.punctuation))
-    text = re.sub(r"\d+", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
+    text = str(text).lower()
 
-    return text
+    text = re.sub(r"http\S+", "", text)
 
+    text = re.sub(r"[^a-zA-Z ]", " ", text)
 
-if __name__ == "__main__":
-    sample = "Email: test@gmail.com Skills: Python, SQL, Machine Learning!"
-    print(clean_text(sample))
+    words = text.split()
+
+    words = [
+        lemmatizer.lemmatize(word)
+        for word in words
+        if word not in stop_words
+    ]
+
+    return " ".join(words)

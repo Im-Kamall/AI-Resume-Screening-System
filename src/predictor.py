@@ -14,11 +14,14 @@ def predict_category(resume_text):
     cleaned_text = clean_text(resume_text)
 
     prediction = model.predict([cleaned_text])[0]
-    probabilities = model.predict_proba([cleaned_text])[0]
 
-    confidence = max(probabilities) * 100
+    confidence = None
 
-    return prediction, round(confidence, 2)
+    if hasattr(model, "predict_proba"):
+        probabilities = model.predict_proba([cleaned_text])[0]
+        confidence = max(probabilities) * 100
+
+    return prediction, round(confidence, 2) if confidence else "N/A"
 
 
 if __name__ == "__main__":
@@ -30,4 +33,4 @@ if __name__ == "__main__":
     category, confidence = predict_category(sample_resume)
 
     print("Predicted Category:", category)
-    print("Confidence:", confidence, "%")
+    print("Confidence:", confidence)
